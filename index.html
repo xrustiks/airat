@@ -6,7 +6,7 @@
   <title>Washing Machine Repair - WashFix</title>
   <meta name="description" content="Urgent repair of washing machines at home. Check-out in 60 minutes. The warranty is up to 12 months" />
   <link href="styles.css" rel="stylesheet">
-  
+  <script src="script.js" defer></script>
 </head>
 <body>
   <header>
@@ -67,20 +67,7 @@
   </main>
 
   <footer>
-    <div class="container">© <span id="y"></span> WashFix</div>
+    <div class="container">© <span id="year"></span> WashFix</div>
   </footer>
-
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-    const form=document.getElementById('request-form');
-    const msg=document.getElementById('form-msg');
-    form.addEventListener('submit',e=>{
-      e.preventDefault();
-      const data=Object.fromEntries(new FormData(form));
-      if(!data.name||!data.phone){msg.textContent='Заполните поля';return}
-      msg.textContent='Заявка отправлена. Мы перезвоним.';
-      form.reset();
-    });
-  </script>
 </body>
 </html>
