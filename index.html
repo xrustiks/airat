@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Washing Machine Repair - WashFix</title>
+  <meta name="description" content="Urgent repair of washing machines at home. Check-out in 60 minutes. The warranty is up to 12 months" />
+  <link href="styles.css" rel="stylesheet">
+  
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="logo">WashFix</div>
+
+      <div class="nav-bar">
+        <a class="btn" href="#services">Services</a>
+        <a class="btn" href="#prices">Price</a>
+        <a class="btn primary" href="tel:+79990000000">+7 (999) 000-00-00</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="container hero">
+      <div>
+        <h1>Washing Machine Repair at Home</h1>
+        <p>Fast, accurate, and with a warranty of up to 12 months. Master arrival from 60 minutes.</p>
+        <a class="btn primary" href="#order">Call a washing machine repairman</a>
+      </div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Washing_machine_icon.svg/512px-Washing_machine_icon.svg.png" alt="Washing machine icon">
+    </section>
+
+    <section class="container section" id="services">
+      <h2>Popular services</h2>
+      <div class="grid-3" style="margin-top:20px">
+        <div class="card"><h3>Not draining water</h3><p class="muted">Cleaning/replacing the pump and filters</p></div>
+        <div class="card"><h3>Not heating water</h3><p class="muted">Replacing the heating element and sensors</p></div>
+        <div class="card"><h3>Loud noise</h3><p class="muted">Bearings, shock absorbers</p></div>
+      </div>
+    </section>
+
+    <section class="container section" id="prices">
+      <h2>Approximate prices</h2>
+      <div class="grid-2" style="margin-top:20px">
+        <div class="card"><h3>Diagnostics</h3><p class="muted">Free with repair</p><b>0 ₽</b></div>
+        <div class="card"><h3>Repair</h3><p class="muted">Depending on complexity</p><b>1500–9000 ₽</b></div>
+      </div>
+    </section>
+
+    <section class="container section" id="order">
+      <h2>Order Repair</h2>
+      <div class="card" style="margin-top:20px">
+        <form id="request-form">
+          <input class="input" type="text" name="name" placeholder="Your Name" required>
+          <input class="input" type="tel" name="phone" placeholder="Phone" required>
+          <textarea class="input" name="issue" rows="3" placeholder="Describe the problem"></textarea>
+          <button class="btn primary" type="submit">Submit</button>
+          <p id="form-msg" class="muted"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© <span id="y"></span> WashFix</div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    const form=document.getElementById('request-form');
+    const msg=document.getElementById('form-msg');
+    form.addEventListener('submit',e=>{
+      e.preventDefault();
+      const data=Object.fromEntries(new FormData(form));
+      if(!data.name||!data.phone){msg.textContent='Заполните поля';return}
+      msg.textContent='Заявка отправлена. Мы перезвоним.';
+      form.reset();
+    });
+  </script>
+</body>
+</html>
