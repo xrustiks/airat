@@ -19,10 +19,15 @@
 }
 
 body {
-  font-family: Inter, sans-serif; 
+  font-family: opensans-ns; 
   background: var(--bg); 
   color: var(--text); 
   line-height: 1.6;
+}
+
+@font-face {
+  font-family: opensans-ns;
+  src: url('../fonts/OpenSansCondensedBold.woff2')
 }
 
 a {
