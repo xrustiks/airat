@@ -121,13 +121,36 @@ header {
 
 .machine-images img {
   margin-left: -40px;
-  transition: transform 0.3s, z-index 0.3s;
+  transition: all 0.3s ease;
   position: relative;
+  filter: brightness(1);
+
+  z-index: 1;
+}
+
+.machine-images img:nth-child(1) {
+  z-index: 3;
+}
+
+.machine-images img:nth-child(2) {
+  z-index: 2;
+}
+
+.machine-images img:nth-child(3) {
+  z-index: 1;
 }
 
 .machine-images img:hover {
   transform: scale(1);
   z-index: 10;
+
+  filter: brightness(1.2);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+/* If the third image is hovered, then the first image goes below the second */
+.machine-images:has(img:nth-child(3):hover) img:nth-child(1) {
+  z-index: 0;
 }
 
 .section {
