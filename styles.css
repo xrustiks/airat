@@ -220,7 +220,6 @@ footer {
 
 @media (max-width: 480px){
   .nav {
-    flex-direction: column;
     gap: 10px;
   }
 
@@ -231,6 +230,17 @@ footer {
   .machine-images img {
     margin-left: 0;
     width: 20%;
+  }
+}
+
+@media (max-width: 600px){
+  .hero, h2 {
+    justify-items: center;
+    text-align: center;
+  }
+
+  .nav {
+    flex-direction: column;
   }
 }
 
