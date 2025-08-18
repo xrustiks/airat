@@ -56,6 +56,10 @@ header {
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
   font-weight: 700; 
   font-size: 18px; 
   color: var(--brand);
@@ -238,7 +242,7 @@ footer {
   }
 }
 
-@media (max-width: 600px){
+@media (max-width: 800px){
   .hero, h2 {
     justify-items: center;
     text-align: center;
