@@ -251,6 +251,10 @@ footer {
   .nav {
     flex-direction: column;
   }
+
+  .logo {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 1024px){
