@@ -14,3 +14,16 @@ form.addEventListener('submit', e => {
   msg.textContent = 'Application submitted. We will call you back.';
   form.reset();
 });
+
+// Image gallery interaction
+const images = document.querySelectorAll('.machine-images img');
+
+images.forEach(img => {
+  img.addEventListener('hover', () => {
+    images.forEach(i => i.classList.remove('active', 'dimmed'));
+    img.classList.add('active');
+    images.forEach(i => {
+      if (i !== img) i.classList.add('dimmed');
+    });
+  });
+});
