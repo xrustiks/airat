@@ -12,10 +12,9 @@
   <header>
     <div class="container nav">
       <div class="logo">
-        <div class = "logo-title">TweedeLeven</div>
-        <div class = "logo-description">washing machine repair service</div>
+        <div class="logo-title">TweedeLeven</div>
+        <div class="logo-description">washing machine repair service</div>
       </div>
-
       <div class="nav-bar">
         <a class="btn" href="#services">Services</a>
         <a class="btn" href="#prices">Price</a>
@@ -31,7 +30,6 @@
         <p>Fast and accurate. You pay only for result. Calling a machine repairman is free</p>
         <a class="btn primary" href="#order">Make a call</a>
       </div>
-
       <div class="machine-images">
         <img src="resources/washing-machine-image.png" alt="Washing machine icon">
         <img src="resources/dishwasher-image.png" alt="Dishwasher icon">
@@ -41,7 +39,6 @@
 
     <section class="container section" id="services">
       <h2>Popular services</h2>
-
       <div class="grid-3" style="margin-top:20px">
         <div class="card"><h3>Not draining water</h3><p class="muted">Cleaning/replacing the pump and filters</p></div>
         <div class="card"><h3>Not heating water</h3><p class="muted">Replacing the heating element and sensors</p></div>
@@ -51,7 +48,6 @@
 
     <section class="container section" id="prices">
       <h2>Approximate prices</h2>
-
       <div class="grid-2" style="margin-top:20px">
         <div class="card"><h3>Diagnostics</h3><p class="muted">Free with repair</p><b>From €60</b></div>
         <div class="card"><h3>Repair</h3><p class="muted">Depending on complexity</p><b>From €60</b></div>
@@ -60,15 +56,14 @@
 
     <section class="container section" id="order">
       <h2>Order Repair</h2>
-
       <div class="card" style="margin-top:20px">
-        <form id="request-form">
+        <form id="request-form" action="/request" method="POST">
           <input class="input" type="text" name="name" placeholder="Your Name" required>
           <input class="input" type="tel" name="phone" placeholder="Phone" required>
           <textarea class="input" name="issue" rows="3" placeholder="Describe the problem"></textarea>
           <button class="btn primary" type="submit">Submit</button>
-          <p id="form-msg" class="muted"></p>
         </form>
+        <div id="form-msg" style="margin-top:10px;color:green;"></div>
       </div>
     </section>
   </main>

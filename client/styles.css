@@ -42,8 +42,7 @@ a {
 
 header {
   background: var(--surface); 
-  border-bottom: 1px solid var(--border); 
-  position: sticky;
+  border-bottom: 1px solid var(--border);
   top: 0; 
   z-index: 20;
 }
