@@ -7,8 +7,8 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Give access to static files to the client
-app.use(express.static(path.resolve(__dirname, '../client')));
+// Give access to static files from the project root
+app.use(express.static(path.resolve(__dirname, '..')));
 
 // Accept JSON and form-data
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -47,7 +47,7 @@ app.post('/request', async (req, res) => {
 
 // All other requests — serve index.html
 app.use((req, res) => {
-  res.sendFile(path.resolve(__dirname, '../client', 'index.html'));
+  res.sendFile(path.resolve(__dirname, '../index.html'));
 });
 
 app.listen(PORT, () => {
