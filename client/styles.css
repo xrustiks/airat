@@ -27,7 +27,7 @@ body {
 
 @font-face {
   font-family: opensans-ns;
-  src: url('../fonts/OpenSansCondensedBold.woff2')
+  src: url('./fonts/OpenSansCondensedBold.woff2')
 }
 
 a {
