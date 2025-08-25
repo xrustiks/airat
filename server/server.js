@@ -19,7 +19,7 @@ app.post('/request', async (req, res) => {
   const { name, phone, issue } = req.body;
 
   if (!name || !phone) {
-    return res.status(400).send('Заполните все поля');
+    return res.status(400).send('Fill all fields');
   }
 
   try {
@@ -32,16 +32,16 @@ app.post('/request', async (req, res) => {
     });
 
     await transporter.sendMail({
-      from: `"Заявка с сайта" <${process.env.EMAIL_USER}>`,
+      from: `"Заявка с сайта от " <${process.env.EMAIL_USER}>`,
       to: process.env.EMAIL_USER,
-      subject: 'Заявка по ремонту машин',
-      text: `Имя: ${name}\nТелефон: ${phone}\nПроблема: ${issue || 'не указана'}`
+      subject: 'Заявка по ремонту аппаратов TweedeLeven',
+      text: `Имя отправителя: ${name}\nЕго телефон: ${phone}\nОписане проблемы: ${issue || 'не указана'}`
     });
 
-    res.send('Заявка отправлена!');
+    res.send('Query successfully sent!');
   } catch (err) {
     console.error(err);
-    res.status(500).send('Ошибка при отправке');
+    res.status(500).send('Sending error');
   }
 });
 
