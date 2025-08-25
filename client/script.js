@@ -26,7 +26,7 @@ form.addEventListener('submit', async e => {
     msg.style.color = 'green';
     form.reset();
   } catch {
-    msg.textContent = 'Ошибка при отправке';
+    msg.textContent = 'Sending error';
     msg.style.color = 'red';
   }
 });
