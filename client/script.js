@@ -7,6 +7,7 @@ const msg = document.getElementById('form-msg');
 
 form.addEventListener('submit', async e => {
   e.preventDefault();
+  // Converts form data to JSON
   const data = Object.fromEntries(new FormData(form));
 
   if (!data.name || !data.phone) {
