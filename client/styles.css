@@ -123,7 +123,10 @@ header {
 /* Machine images section */
 .machine-images {
   display: flex;
+  /* justify-content: center; */
   gap: 0;
+
+  border: 1px dotted black;
 }
 
 .machine-images img {
@@ -255,6 +258,10 @@ footer {
 
   .nav {
     flex-direction: column;
+  }
+
+  .machine-images {
+    justify-content: center;
   }
 }
 
