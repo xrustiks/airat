@@ -123,10 +123,7 @@ header {
 /* Machine images section */
 .machine-images {
   display: flex;
-  /* justify-content: center; */
   gap: 0;
-
-  
 }
 
 .machine-images img {
