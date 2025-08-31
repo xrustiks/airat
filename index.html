@@ -6,7 +6,7 @@
   <title>Washing Machine Repair - TweedeLeven</title>
   <meta name="description" content="Urgent repair of washing, dishwashing and drying machines at home. Check-out in 60 minutes. The warranty is up to 12 months" />
   <link href="client/styles.css" rel="stylesheet">
-  <script src="client/script.js" defer></script>
+  <!-- <script src="client/script.js" defer></script> -->
 </head>
 <body>
   <header>
@@ -58,12 +58,18 @@
     <section class="container section" id="order">
       <h2>Order Repair</h2>
       <div class="card" style="margin-top:20px">
-        <form id="request-form" action="/request" method="POST">
+        <form action="https://formspree.io/f/mqadbjrp" method="POST">
           <input class="input" type="text" name="name" placeholder="Your Name" required>
           <input class="input" type="tel" name="phone" placeholder="Phone" required>
           <textarea class="input" name="issue" rows="3" placeholder="Describe the problem"></textarea>
           <button class="btn primary" type="submit">Submit</button>
         </form>
+        <!-- <form id="request-form" action="/request" method="POST">
+          <input class="input" type="text" name="name" placeholder="Your Name" required>
+          <input class="input" type="tel" name="phone" placeholder="Phone" required>
+          <textarea class="input" name="issue" rows="3" placeholder="Describe the problem"></textarea>
+          <button class="btn primary" type="submit">Submit</button>
+        </form> -->
         <div id="form-msg" style="margin-top:10px;color:green;"></div>
       </div>
     </section>
